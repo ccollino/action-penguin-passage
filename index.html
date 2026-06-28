@@ -178,7 +178,7 @@
   </details>
 
   <div class="small" style="text-align:center;padding:14px 0 4px">
-    Action Penguin · Nauticat 39 · Rosslare → Helford 167.7 nm · dep 01 Jul 07:00 · Lizard fair window 04:25–10:45, target transit 09:00–09:30, foul at 10:45 · v1.3 (offline)<br>
+    Action Penguin · Nauticat 39 · Rosslare → Helford 167.7 nm · dep 01 Jul 07:00 · Lizard fair window 04:25–10:45, target transit 09:00–09:30, foul at 10:45 · v1.4 (offline)<br>
     For guidance only — keep a proper watch, cross-check the chart plotter, and re-confirm the Lizard / Helford tides against the almanac.
   </div>
 
@@ -382,7 +382,7 @@
     }
     // projected speed made good for the remaining run to the Lizard =
     // running average (which already contains the tide you've HAD) + extra tide you expect on the run-in
-    const baseSpeed = (avgKn!=null?avgKn:cfg.target);
+    const baseSpeed = (avgKn!=null && avgKn>0.05) ? avgKn : cfg.target;
     const tideRun = cfg.tiderunin||0;
     const projSpeed = Math.max(0.1, baseSpeed + tideRun);
     const projStr = tideRun
@@ -452,9 +452,12 @@
         setStatus("st-green","On track for the gate",
           "ETA Lizard "+fmtClock(etaLiz)+", inside the window. Projecting "+projStr+".");
       }
-    } else {
+    } else if(!(gOpen&&gClose)){
       setStatus("st-amber","Logging — gate not set",
         "Enter the Lizard gate times in ⚙ to get the timing readout.");
+    } else {
+      setStatus("st-idle","Logging — waiting for speed",
+        "ETA to the Lizard appears once you're moving.");
     }
   }
 
