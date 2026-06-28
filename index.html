@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Passage">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0b1622">
+<title>Action Penguin — Passage Monitor</title>
+<style>
+  :root{
+    --bg:#0b1622; --panel:#13212f; --panel2:#1b2d3e; --line:#26425a;
+    --txt:#e8f0f7; --dim:#8fa6b8; --accent:#39a0ff;
+    --green:#2ecc71; --amber:#f1c40f; --red:#ff5252;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    -webkit-text-size-adjust:100%}
+  body{padding:env(safe-area-inset-top) 10px calc(env(safe-area-inset-bottom) + 10px) 10px}
+  h1{font-size:15px;margin:8px 2px 4px;letter-spacing:.5px;font-weight:600}
+  h1 small{color:var(--dim);font-weight:400}
+  .status{border-radius:14px;padding:14px 16px;text-align:center;font-weight:700;
+    font-size:20px;margin:8px 0;line-height:1.2;border:1px solid var(--line);
+    background:var(--panel)}
+  .status .sub{display:block;font-size:13px;font-weight:500;margin-top:4px;opacity:.9}
+  .st-green{background:rgba(46,204,113,.16);border-color:var(--green);color:#9af5c1}
+  .st-amber{background:rgba(241,196,15,.16);border-color:var(--amber);color:#ffe98a}
+  .st-red{background:rgba(255,82,82,.18);border-color:var(--red);color:#ffb3b3}
+  .st-idle{background:var(--panel);border-color:var(--line);color:var(--dim)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+    padding:12px 12px 14px}
+  .card .label{font-size:12px;color:var(--dim);text-transform:uppercase;letter-spacing:.6px}
+  .card .big{font-size:42px;font-weight:700;line-height:1;margin-top:6px;
+    font-variant-numeric:tabular-nums}
+  .card .unit{font-size:15px;color:var(--dim);font-weight:500}
+  .card .note{font-size:12px;color:var(--dim);margin-top:6px;min-height:15px}
+  .big.good{color:var(--green)} .big.warn{color:var(--amber)} .big.bad{color:var(--red)}
+  .rows{margin-top:10px;background:var(--panel);border:1px solid var(--line);
+    border-radius:14px;overflow:hidden}
+  .row{display:flex;justify-content:space-between;align-items:center;
+    padding:11px 14px;border-top:1px solid var(--line);font-size:15px}
+  .row:first-child{border-top:none}
+  .row .k{color:var(--dim)}
+  .row .v{font-variant-numeric:tabular-nums;font-weight:600;text-align:right}
+  .btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+  button{font-size:16px;font-weight:600;padding:15px 10px;border-radius:13px;
+    border:1px solid var(--line);background:var(--panel2);color:var(--txt);
+    cursor:pointer;width:100%}
+  button:active{transform:scale(.98)}
+  .b-go{background:var(--green);border-color:var(--green);color:#06281a}
+  .b-stop{background:var(--red);border-color:var(--red);color:#2a0606}
+  .b-wide{grid-column:1 / -1}
+  details{margin-top:12px;background:var(--panel);border:1px solid var(--line);
+    border-radius:14px;padding:4px 14px}
+  summary{padding:12px 0;font-weight:600;cursor:pointer;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"▸";float:right;color:var(--dim)}
+  details[open] summary::after{content:"▾"}
+  .field{display:flex;justify-content:space-between;align-items:center;
+    padding:9px 0;border-top:1px solid var(--line);gap:10px}
+  .field label{color:var(--dim);font-size:14px;flex:1}
+  .field input{background:var(--bg);border:1px solid var(--line);color:var(--txt);
+    border-radius:9px;padding:9px;font-size:15px;width:46%;text-align:right;
+    font-variant-numeric:tabular-nums}
+  .field input[type=datetime-local]{width:62%}
+  .small{font-size:12px;color:var(--dim);padding:8px 0 4px;line-height:1.45}
+  .toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);
+    background:#000c;border:1px solid var(--line);padding:10px 16px;border-radius:10px;
+    font-size:14px;opacity:0;transition:opacity .25s;pointer-events:none;z-index:9}
+  .toast.show{opacity:1}
+  .pulse{width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:6px;
+    background:var(--dim);vertical-align:middle}
+  .pulse.live{background:var(--green);animation:p 1.6s infinite}
+  @keyframes p{0%{opacity:1}50%{opacity:.3}100%{opacity:1}}
+  /* Night mode (red, dim) */
+  body.night{filter:saturate(.4) brightness(.85)}
+  body.night{--accent:#ff6b6b;--green:#c0705a;--amber:#c89a4a;--red:#ff5252;
+    --txt:#e8b9b9;--dim:#a07a7a}
+  .obadge{font-size:12px;margin:2px 2px 8px;color:var(--dim);
+    background:var(--panel);border:1px solid var(--line);border-radius:10px;
+    padding:8px 11px;line-height:1.45}
+  .obadge b{color:var(--green)}
+</style>
+</head>
+<body>
+  <h1>⛵ Action Penguin — Passage Monitor &nbsp;<small id="legHdr">Rosslare → Helford</small></h1>
+  <div id="offlineBadge" class="obadge">Checking offline readiness…</div>
+
+  <div id="status" class="status st-idle">Not started
+    <span class="sub" id="statusSub">Press START at departure to begin logging</span>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <div class="label">Avg speed</div>
+      <div class="big" id="avgSpd">—<span class="unit"> kn</span></div>
+      <div class="note" id="avgNote">target 6.0 kn</div>
+    </div>
+    <div class="card">
+      <div class="label">Need to gate</div>
+      <div class="big" id="reqSpd">—<span class="unit"> kn</span></div>
+      <div class="note" id="reqNote">avg you must hold</div>
+    </div>
+  </div>
+
+  <div class="rows">
+    <div class="row"><span class="k"><span id="liveDot" class="pulse"></span>Live speed (SOG)</span><span class="v" id="sog">— kn</span></div>
+    <div class="row"><span class="k">Lizard — miles to run</span><span class="v" id="distLiz">— nm</span></div>
+    <div class="row"><span class="k">ETA at Lizard</span><span class="v" id="etaLiz">—</span></div>
+    <div class="row"><span class="k">Lizard gate window</span><span class="v" id="gateWin">—</span></div>
+    <div class="row"><span class="k">Direct range to Lizard</span><span class="v" id="rngLiz">— nm</span></div>
+    <div class="row"><span class="k">Helford — miles to run</span><span class="v" id="distHel">— nm</span></div>
+    <div class="row"><span class="k">Elapsed / Distance run</span><span class="v" id="elapDist">—</span></div>
+    <div class="row"><span class="k">Position</span><span class="v" id="pos">—</span></div>
+    <div class="row"><span class="k">GPS accuracy / fixes</span><span class="v" id="accFix">—</span></div>
+  </div>
+
+  <div class="btns">
+    <button id="startBtn" class="b-go">▶ START</button>
+    <button id="stopBtn" class="b-stop" disabled>■ STOP</button>
+    <button id="markBtn">⚑ Mark point</button>
+    <button id="nightBtn">🌙 Night</button>
+    <button id="gpxBtn">⬇ Export GPX</button>
+    <button id="csvBtn">⬇ Export CSV</button>
+    <button id="resetBtn" class="b-wide">↺ Reset passage log</button>
+  </div>
+
+  <details id="settings">
+    <summary>⚙ Settings (editable on the boat)</summary>
+    <div class="field"><label>Departure (date &amp; time)</label>
+      <input type="datetime-local" id="set_dep"></div>
+    <div class="field"><label>Target average speed (kn)</label>
+      <input type="number" step="0.1" id="set_target"></div>
+    <div class="small">— Lizard tide gate: pass between these times —</div>
+    <div class="field"><label>Gate opens (earliest)</label>
+      <input type="datetime-local" id="set_gopen"></div>
+    <div class="field"><label>Gate closes (latest)</label>
+      <input type="datetime-local" id="set_gclose"></div>
+    <div class="small">— Waypoints (decimal degrees, W &amp; S negative) —</div>
+    <div class="field"><label>Lizard Point — lat</label>
+      <input type="number" step="0.0001" id="set_lizlat"></div>
+    <div class="field"><label>Lizard Point — lon</label>
+      <input type="number" step="0.0001" id="set_lizlon"></div>
+    <div class="field"><label>Helford entrance — lat</label>
+      <input type="number" step="0.0001" id="set_hellat"></div>
+    <div class="field"><label>Helford entrance — lon</label>
+      <input type="number" step="0.0001" id="set_hellon"></div>
+    <div class="small">— Route distance (drives the gate ETA from miles run) —</div>
+    <div class="field"><label>Planned route total (nm)</label>
+      <input type="number" step="0.1" id="set_routeNm"></div>
+    <div class="field"><label>Lizard before Helford (nm)</label>
+      <input type="number" step="0.1" id="set_lizoff"></div>
+    <div class="small">— Run-in tide: extra tide you expect on the approach, added to your running average for the gate ETA (+ fair / − foul) —</div>
+    <div class="field"><label>Run-in tide (kn)</label>
+      <input type="number" step="0.1" id="set_tiderunin"></div>
+    <div class="field"><label>Keep screen awake (GPS on)</label>
+      <input type="checkbox" id="set_wake" style="width:auto"></div>
+    <div class="small">Settings &amp; track are saved on this phone automatically. Add this page to your Home Screen for an app-like, offline experience. GPS keeps running only while the screen is on — enable "keep screen awake" and keep the app in front.</div>
+  </details>
+
+  <details id="install">
+    <summary>📲 Install on iPhone &amp; use offline</summary>
+    <div class="small">
+      <b>GPS needs no phone signal.</b> The satellites broadcast straight to your phone, and every line of this app is stored on the device — nothing is downloaded while you sail.<br><br>
+      <b>Install it:</b><br>
+      1&nbsp;· Open this file in <b>Safari</b> (not the grey Files preview).<br>
+      2&nbsp;· Tap <b>Share</b> (the square with an ↑).<br>
+      3&nbsp;· Choose <b>Add to Home Screen</b>, then <b>Add</b>.<br>
+      4&nbsp;· Launch from the new <b>Passage</b> icon — it opens full-screen with no Safari bars.<br><br>
+      <b>Prove it offline at the dock:</b> turn on <b>Aeroplane Mode</b> (GPS still works on iPhone), open the app, tap START and check it shows your position and a speed. If it works in Aeroplane Mode on the pontoon, it works in the Celtic Sea.<br><br>
+      <b>Underway:</b> keep "keep screen awake" on, keep the app in front (iOS pauses GPS when the screen sleeps or you switch apps), and keep the phone on charge.
+    </div>
+  </details>
+
+  <div class="small" style="text-align:center;padding:14px 0 4px">
+    Action Penguin · Nauticat 39 · Rosslare → Helford 167.7 nm · dep 01 Jul 07:00 · Lizard fair window 04:25–10:45, target transit 09:00–09:30, foul at 10:45 · v1.3 (offline)<br>
+    For guidance only — keep a proper watch, cross-check the chart plotter, and re-confirm the Lizard / Helford tides against the almanac.
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+<script>
+"use strict";
+(function(){
+  const $ = id => document.getElementById(id);
+  const NM = 1852;                 // metres per nautical mile
+  const MS_TO_KN = 1.943844;       // m/s -> knots
+  const LS = "ap_passage_v1";
+
+  // ---------- defaults (all editable in Settings) ----------
+  // From Ian's Action Penguin passage plan (Rosslare approaches → Helford, 01 Jul 2026)
+  const DEF = {
+    dep:    "2026-07-01T07:00",         // Depart Rosslare approaches, Wed 01 Jul 07:00 BST
+    target: 6.0,                        // routed avg speed made good
+    gopen:  "2026-07-02T04:25",         // Lizard fair stream begins (east-going) — Thu 02 Jul
+    gclose: "2026-07-02T10:45",         // Lizard stream turns foul — HARD deadline, round before this
+    lizlat: 49.9586, lizlon: -5.2042,   // Lizard Point
+    hellat: 50.0950, hellon: -5.0833,   // Helford target (50°05.7'N 005°05'W, W edge Falmouth Bay)
+    routeNm: 167.7,                     // Ian's routed distance Rosslare → Helford
+    lizoff:  10.0,                      // route miles Lizard-before-Helford (Helford ~10nm NE of Lizard)
+    tiderunin: 0,                       // extra tide expected on the run-in (kn, +fair/−foul), added to running avg for the ETA
+    wake:   true
+  };
+  let cfg = Object.assign({}, DEF);
+
+  // ---------- state ----------
+  let track = [];          // {t, lat, lon, acc, spd}
+  let running = false;
+  let watchId = null;
+  let wakeLock = null;
+  let odo = 0;             // metres travelled (filtered)
+  let last = null;         // last accepted fix
+  let startT = null;       // ms of passage start
+
+  // ---------- maths ----------
+  function hav(aLat,aLon,bLat,bLon){
+    const R=6371000, toR=Math.PI/180;
+    const dLat=(bLat-aLat)*toR, dLon=(bLon-aLon)*toR;
+    const la1=aLat*toR, la2=bLat*toR;
+    const x=Math.sin(dLat/2)**2 + Math.cos(la1)*Math.cos(la2)*Math.sin(dLon/2)**2;
+    return 2*R*Math.asin(Math.min(1,Math.sqrt(x)));   // metres
+  }
+  const fmtNm = m => (m/NM).toFixed(1);
+  function fmtClock(d){ if(!d) return "—";
+    return d.toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"}); }
+  function fmtDur(ms){ if(ms<0) ms=0;
+    const m=Math.floor(ms/60000), h=Math.floor(m/60);
+    return h+"h "+String(m%60).padStart(2,"0")+"m"; }
+  function fmtLatLon(lat,lon){
+    const d=(v,pos,neg)=>{const h=v>=0?pos:neg, a=Math.abs(v),
+      deg=Math.floor(a), min=((a-deg)*60).toFixed(2);
+      return deg+"°"+min+"'"+h;};
+    return d(lat,"N","S")+" "+d(lon,"E","W");
+  }
+
+  // ---------- persistence ----------
+  function save(){
+    try{ localStorage.setItem(LS, JSON.stringify(
+      {cfg, track, running, odo, startT})); }catch(e){}
+  }
+  function load(){
+    try{
+      const s=JSON.parse(localStorage.getItem(LS)||"null");
+      if(s){ cfg=Object.assign({},DEF,s.cfg); track=s.track||[];
+        running=!!s.running; odo=s.odo||0; startT=s.startT||null;
+        if(track.length) last=track[track.length-1];
+      }
+    }catch(e){}
+  }
+
+  // ---------- settings UI ----------
+  const fields=["dep","target","gopen","gclose","lizlat","lizlon","hellat","hellon"];
+  function cfgToUI(){
+    $("set_dep").value=cfg.dep; $("set_target").value=cfg.target;
+    $("set_gopen").value=cfg.gopen; $("set_gclose").value=cfg.gclose;
+    $("set_lizlat").value=cfg.lizlat; $("set_lizlon").value=cfg.lizlon;
+    $("set_hellat").value=cfg.hellat; $("set_hellon").value=cfg.hellon;
+    $("set_routeNm").value=cfg.routeNm; $("set_lizoff").value=cfg.lizoff;
+    $("set_tiderunin").value=cfg.tiderunin;
+    $("set_wake").checked=cfg.wake;
+  }
+  function uiToCfg(){
+    cfg.dep=$("set_dep").value||DEF.dep;
+    cfg.target=parseFloat($("set_target").value)||DEF.target;
+    cfg.gopen=$("set_gopen").value; cfg.gclose=$("set_gclose").value;
+    cfg.lizlat=parseFloat($("set_lizlat").value); cfg.lizlon=parseFloat($("set_lizlon").value);
+    cfg.hellat=parseFloat($("set_hellat").value); cfg.hellon=parseFloat($("set_hellon").value);
+    cfg.routeNm=parseFloat($("set_routeNm").value)||DEF.routeNm;
+    cfg.lizoff=parseFloat($("set_lizoff").value); if(isNaN(cfg.lizoff))cfg.lizoff=DEF.lizoff;
+    cfg.tiderunin=parseFloat($("set_tiderunin").value); if(isNaN(cfg.tiderunin))cfg.tiderunin=0;
+    cfg.wake=$("set_wake").checked;
+    save(); render();
+  }
+  ["set_dep","set_target","set_gopen","set_gclose","set_lizlat","set_lizlon",
+   "set_hellat","set_hellon","set_routeNm","set_lizoff","set_tiderunin","set_wake"].forEach(id=>{
+    $(id).addEventListener("change", uiToCfg);
+  });
+
+  function toast(m){ const t=$("toast"); t.textContent=m; t.classList.add("show");
+    clearTimeout(t._h); t._h=setTimeout(()=>t.classList.remove("show"),1800); }
+
+  // ---------- GPS ----------
+  function startGPS(){
+    if(!navigator.geolocation){ toast("No GPS on this device"); return; }
+    watchId=navigator.geolocation.watchPosition(onFix, onErr,
+      {enableHighAccuracy:true, maximumAge:1000, timeout:15000});
+    $("liveDot").classList.add("live");
+  }
+  function stopGPS(){
+    if(watchId!==null){ navigator.geolocation.clearWatch(watchId); watchId=null; }
+    $("liveDot").classList.remove("live");
+  }
+  function onErr(e){ toast("GPS: "+(e.message||"unavailable")); }
+
+  function onFix(p){
+    const c=p.coords;
+    const fix={t:Date.now(), lat:c.latitude, lon:c.longitude,
+      acc:c.accuracy, spd:(c.speed!=null && !isNaN(c.speed))?c.speed:null};
+    if(running){
+      // filter: accept odometer step only if accurate & real movement
+      if(last){
+        const step=hav(last.lat,last.lon,fix.lat,fix.lon);
+        if(fix.acc<=40 && step>=8 && step<2000) odo+=step;
+      }
+      track.push(fix); last=fix;
+      if(track.length%5===0) save();
+    } else {
+      last=fix; // hold a position even before start
+    }
+    render(fix);
+  }
+
+  async function requestWake(){
+    try{
+      if(cfg.wake && "wakeLock" in navigator){
+        wakeLock=await navigator.wakeLock.request("screen");
+        wakeLock.addEventListener("release",()=>{});
+      }
+    }catch(e){}
+  }
+  function releaseWake(){ try{ if(wakeLock){wakeLock.release(); wakeLock=null;} }catch(e){} }
+  document.addEventListener("visibilitychange",()=>{
+    if(document.visibilityState==="visible" && running) requestWake();
+  });
+
+  // ---------- start / stop ----------
+  function startPassage(){
+    running=true;
+    startT = cfg.dep ? new Date(cfg.dep).getTime() : Date.now();
+    if(startT>Date.now()) startT=Date.now();   // if launched after dep time, use now
+    odo=0; track=[]; last=null;
+    $("startBtn").disabled=true; $("stopBtn").disabled=false;
+    startGPS(); requestWake(); save(); render();
+    toast("Passage started — logging");
+  }
+  function stopPassage(){
+    running=false; stopGPS(); releaseWake();
+    $("startBtn").disabled=false; $("stopBtn").disabled=true;
+    save(); render(); toast("Passage stopped");
+  }
+
+  // ---------- render ----------
+  function render(fix){
+    const now=Date.now();
+    const haveFix = fix || last;
+    // direct great-circle range to the marks (true GPS range, for chartwork & arrival)
+    let dLiz=null,dHel=null;
+    if(haveFix){
+      dLiz=hav(haveFix.lat,haveFix.lon,cfg.lizlat,cfg.lizlon);
+      dHel=hav(haveFix.lat,haveFix.lon,cfg.hellat,cfg.hellon);
+    }
+    // elapsed & averages
+    const elapsedMs = (running&&startT)?Math.max(0,now-startT):0;
+    const elapsedH = elapsedMs/3600000;
+    const avgKn = (elapsedH>0.0008)?(odo/NM)/elapsedH:null;  // ~3s min
+    // route miles still to run (planned distance minus miles actually run) — drives the gate ETA
+    const odoNm = odo/NM;
+    const lizToGo = Math.max(0, (cfg.routeNm - cfg.lizoff) - odoNm); // to the Lizard, along route
+    const helToGo = Math.max(0, cfg.routeNm - odoNm);                // to Helford, along route
+    // live SOG
+    let sog=null;
+    if(haveFix){
+      if(haveFix.spd!=null) sog=haveFix.spd*MS_TO_KN;
+      else if(track.length>=2){
+        const a=track[track.length-2], b=track[track.length-1];
+        const dt=(b.t-a.t)/3600000;
+        if(dt>0) sog=(hav(a.lat,a.lon,b.lat,b.lon)/NM)/dt;
+      }
+    }
+    // gate timing — based on route miles still to run to the Lizard
+    const gOpen = cfg.gopen?new Date(cfg.gopen).getTime():null;
+    const gClose= cfg.gclose?new Date(cfg.gclose).getTime():null;
+    let reqClose=null, reqOpen=null;
+    if(running){
+      if(gClose){ const h=(gClose-now)/3600000; reqClose=h>0?lizToGo/h:Infinity; }
+      if(gOpen){  const h=(gOpen-now)/3600000;  reqOpen =h>0?lizToGo/h:0; }
+    }
+    // projected speed made good for the remaining run to the Lizard =
+    // running average (which already contains the tide you've HAD) + extra tide you expect on the run-in
+    const baseSpeed = (avgKn!=null?avgKn:cfg.target);
+    const tideRun = cfg.tiderunin||0;
+    const projSpeed = Math.max(0.1, baseSpeed + tideRun);
+    const projStr = tideRun
+      ? projSpeed.toFixed(1)+" kn ("+baseSpeed.toFixed(1)+(tideRun>=0?" +":" −")+Math.abs(tideRun).toFixed(1)+" tide)"
+      : projSpeed.toFixed(1)+" kn";
+    // ETA at Lizard over route miles to run, at the projected speed
+    let etaLiz=null;
+    if(running && projSpeed>0.1) etaLiz=new Date(now+lizToGo/projSpeed*3600000);
+
+    // ---- write live readouts ----
+    $("sog").textContent = sog!=null?sog.toFixed(1)+" kn":"— kn";
+    $("distLiz").textContent = running?lizToGo.toFixed(1)+" nm":"— nm";
+    $("rngLiz").textContent = dLiz!=null?fmtNm(dLiz)+" nm":"— nm";
+    $("distHel").textContent = running?helToGo.toFixed(1)+" nm":"— nm";
+    $("etaLiz").textContent = etaLiz?fmtClock(etaLiz):"—";
+    $("gateWin").textContent = (gOpen&&gClose)?
+      (fmtClock(new Date(gOpen))+"–"+fmtClock(new Date(gClose))):"set in ⚙";
+    $("elapDist").textContent = running?
+      (fmtDur(elapsedMs)+" · "+fmtNm(odo)+" nm"):"—";
+    $("pos").textContent = haveFix?fmtLatLon(haveFix.lat,haveFix.lon):"—";
+    $("accFix").textContent = haveFix?
+      ("±"+Math.round(haveFix.acc)+" m · "+track.length+" fixes"):"—";
+
+    // ---- avg speed card ----
+    const avgEl=$("avgSpd");
+    if(avgKn!=null){
+      avgEl.innerHTML=avgKn.toFixed(1)+'<span class="unit"> kn</span>';
+      avgEl.className="big "+(avgKn>=cfg.target?"good":(avgKn>=cfg.target-0.7?"warn":"bad"));
+      const diff=avgKn-cfg.target;
+      $("avgNote").textContent=(diff>=0?"+":"")+diff.toFixed(1)+" kn vs "+cfg.target.toFixed(1)+" target";
+    } else {
+      avgEl.innerHTML='—<span class="unit"> kn</span>'; avgEl.className="big";
+      $("avgNote").textContent="target "+cfg.target.toFixed(1)+" kn";
+    }
+
+    // ---- required-speed card ----
+    const reqEl=$("reqSpd");
+    if(reqClose!=null && isFinite(reqClose)){
+      reqEl.innerHTML=reqClose.toFixed(1)+'<span class="unit"> kn</span>';
+      reqEl.className="big "+( projSpeed>=reqClose?"good":"bad");
+      $("reqNote").textContent="made good to "+fmtClock(new Date(gClose))+
+        " · projecting "+projStr;
+    } else {
+      reqEl.innerHTML='—<span class="unit"> kn</span>'; reqEl.className="big";
+      $("reqNote").textContent = (gClose? (running?"past the gate time":"begins at departure") : "set gate time in ⚙");
+    }
+
+    // ---- status banner ----
+    const sEl=$("status"), subEl=$("statusSub");
+    function setStatus(cls,msg,sub){ sEl.className="status "+cls;
+      sEl.firstChild.textContent=msg+" "; subEl.textContent=sub; }
+    if(!running){
+      setStatus("st-idle","Not started","Press START at departure to begin logging");
+    } else if(dLiz==null){
+      setStatus("st-idle","Waiting for GPS…","Acquiring satellites — keep the screen on");
+    } else if(gOpen&&gClose&&etaLiz){
+      const eta=etaLiz.getTime();
+      if(dLiz/NM<0.3){ setStatus("st-green","At the Lizard","Rounding now — carry on to Helford"); }
+      else if(eta>gClose){
+        const need=reqClose;
+        setStatus("st-red","Push on — behind the gate",
+          "Need "+ (isFinite(need)?need.toFixed(1)+" kn":"more speed") +" to make "+fmtClock(new Date(gClose))+". ETA "+fmtClock(etaLiz));
+      } else if(eta<gOpen){
+        setStatus("st-amber","Early — ease off",
+          "Gate opens "+fmtClock(new Date(gOpen))+", ETA "+fmtClock(etaLiz)+". Foul tide if you push.");
+      } else {
+        setStatus("st-green","On track for the gate",
+          "ETA Lizard "+fmtClock(etaLiz)+", inside the window. Projecting "+projStr+".");
+      }
+    } else {
+      setStatus("st-amber","Logging — gate not set",
+        "Enter the Lizard gate times in ⚙ to get the timing readout.");
+    }
+  }
+
+  // ---------- exports ----------
+  function dl(name, text, type){
+    const b=new Blob([text],{type}); const u=URL.createObjectURL(b);
+    const a=document.createElement("a"); a.href=u; a.download=name; a.click();
+    setTimeout(()=>URL.revokeObjectURL(u),1500);
+  }
+  function exportGPX(){
+    if(!track.length){ toast("No track yet"); return; }
+    let g='<?xml version="1.0" encoding="UTF-8"?>\n';
+    g+='<gpx version="1.1" creator="Action Penguin Passage Monitor" xmlns="http://www.topografix.com/GPX/1/1">\n';
+    g+='<trk><name>Action Penguin '+new Date(track[0].t).toISOString()+'</name><trkseg>\n';
+    track.forEach(f=>{ g+='<trkpt lat="'+f.lat.toFixed(6)+'" lon="'+f.lon.toFixed(6)+'">'+
+      '<time>'+new Date(f.t).toISOString()+'</time></trkpt>\n'; });
+    g+='</trkseg></trk></gpx>\n';
+    dl("action-penguin-track.gpx", g, "application/gpx+xml");
+  }
+  function exportCSV(){
+    if(!track.length){ toast("No track yet"); return; }
+    let c="time_iso,lat,lon,accuracy_m,sog_kn\n";
+    track.forEach(f=>{ c+=new Date(f.t).toISOString()+","+f.lat.toFixed(6)+","+
+      f.lon.toFixed(6)+","+Math.round(f.acc)+","+
+      (f.spd!=null?(f.spd*MS_TO_KN).toFixed(2):"")+"\n"; });
+    dl("action-penguin-track.csv", c, "text/csv");
+  }
+
+  // ---------- buttons ----------
+  $("startBtn").onclick=startPassage;
+  $("stopBtn").onclick=stopPassage;
+  $("gpxBtn").onclick=exportGPX;
+  $("csvBtn").onclick=exportCSV;
+  $("markBtn").onclick=()=>{ if(last){
+      track.push({t:Date.now(),lat:last.lat,lon:last.lon,acc:last.acc,spd:null,mark:true});
+      save(); toast("Point marked"); } else toast("No GPS fix yet"); };
+  $("nightBtn").onclick=()=>{ document.body.classList.toggle("night");
+    localStorage.setItem("af_night", document.body.classList.contains("night")?"1":"0"); };
+  $("resetBtn").onclick=()=>{ if(confirm("Clear the logged track and reset the passage?")){
+      track=[]; odo=0; startT=null; last=null; running=false; stopGPS(); releaseWake();
+      $("startBtn").disabled=false; $("stopBtn").disabled=true; save(); render();
+      toast("Passage reset"); } };
+
+  // ---------- offline / install status ----------
+  (function(){
+    const standalone = (window.navigator.standalone===true) ||
+      (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches);
+    const gps = ("geolocation" in navigator) ? "GPS ready" : "no GPS on this device";
+    $("offlineBadge").innerHTML = standalone
+      ? '<b>✓ Installed &amp; offline-ready.</b> All code is on your phone; GPS needs no signal. ('+gps+')'
+      : '<b>✓ No internet needed</b> — every part of this app is on your phone. For a full-screen offline app, use “Install on iPhone” below. ('+gps+')';
+  })();
+
+  // ---------- boot ----------
+  load();
+  cfgToUI();
+  if(localStorage.getItem("af_night")==="1") document.body.classList.add("night");
+  if(running){ $("startBtn").disabled=true; $("stopBtn").disabled=false;
+    startGPS(); requestWake(); }
+  render();
+  setInterval(()=>render(), 1000);   // keep clocks/ETA fresh
+})();
+</script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){});});}</script>
+</body>
+</html>
